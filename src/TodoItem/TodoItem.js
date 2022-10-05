@@ -1,12 +1,12 @@
+import { Checkbox, FormControlLabel, FormLabel, Input } from '@mui/material';
 import React from 'react';
 import './TodoItem.css'
 class TodoItem extends React.Component{
     render(){
         return(
-            <div>
-            <input type='checkbox' name={this.props.value} onChange={(e)=>this.props.handleClick(e)} disabled={this.props.disabled} value={this.props.value}/>
-            <label className={this.props.disabled? 'doneLabel': ''}>{this.props.value}</label>
-            </div>
+            <FormControlLabel control={<Checkbox
+                onChange={()=>this.props.handleClick(this.props.value)}>
+            </Checkbox>} sx={{ display: 'block'}}label={this.props.value} disabled={this.props.disabled} ></FormControlLabel>
         );
     }
 }
