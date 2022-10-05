@@ -1,0 +1,3 @@
+- We need to have an add button that adds item to todo list 
+- We need to render the whole list of items
+- 
